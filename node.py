@@ -1,10 +1,13 @@
+from numpy import void
+
+
 class Node:
     def __init__(self,data,left=None,right=None) -> None:
         self.data=data
         self.left=left
         self.right=right
     
-    def insert(self,x):
+    def insert(self,x) -> None:
         if x>self.data:
             if(self.right is None):
                 self.right=Node(x)
